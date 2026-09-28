@@ -1,0 +1,139 @@
+/* ==========================================================================
+   NER Logistics Intelligence Platform - Design Token System
+   Theme: Light Green Nature-Tech + AI Logistics Intelligence
+   ========================================================================== */
+
+
+
+/* This is a  DESIGN LANGUAGE for my WEB DESIGN   */
+
+:root {
+   /* ------------------------------------------------------------------------
+     1. Color Tokens
+     ------------------------------------------------------------------------ */
+   /* Primary AI & Brand Greens */
+   --color-primary-500: #0FA46F;
+   --color-primary-600: #12A08A;
+   --color-primary: var(--color-primary-500);
+   --color-primary-hover: #0C8A5D;
+
+   /* Forest Deep Neutral Greens */
+   --color-forest-900: #0A3B2C;
+   --color-forest-800: #0D7C58;
+   --color-forest: var(--color-forest-900);
+
+   /* Light Green Accents */
+   --color-light-green: #8FD8AC;
+
+   /* Mint Tones */
+   --color-mint-50: #EAF8F0;
+   --color-mint-100: #D3F0E0;
+   --color-mint-soft: #F6FDF9;
+
+   /* Pearl & White Surfaces */
+   --color-pearl: #FBFDFB;
+   --color-white: #FFFFFF;
+
+   /* Text Colors */
+   --color-text-main: #10271E;
+   --color-text-muted: #5A7266;
+   --color-text-secondary: #6F8178;
+   --color-text-inverse: #FFFFFF;
+
+   /* Border Colors */
+   --color-border-subtle: #DCEBE2;
+   --color-border-medium: #C2DBCB;
+
+   /* Status Tokens */
+   --color-status-safe: #0FA46F;
+   --color-status-moderate: #B7791F;
+   --color-status-high: #D98A76;
+   --color-status-critical: #B8432F;
+   --color-status-neutral: #EEF4F0;
+
+   /* ------------------------------------------------------------------------
+     2. Gradient Tokens
+     ------------------------------------------------------------------------ */
+   --gradient-primary-ai: linear-gradient(135deg, #0FA46F, #12A08A);
+   --gradient-soft-mint: linear-gradient(135deg, #F6FDF9 0%, #E0F6EA 55%, #CDEEDD 100%);
+   --gradient-deep-intelligence: linear-gradient(135deg, #0D7C58, #0A3B2C);
+   --gradient-surface: linear-gradient(180deg, #F2FBF6, #FFFFFF);
+
+   /* ------------------------------------------------------------------------
+     3. Typography Tokens
+     ------------------------------------------------------------------------ */
+   --font-family-sans: "Plus Jakarta Sans", Inter, "Segoe UI", system-ui, Arial, sans-serif;
+
+   /* Font Sizes */
+   --font-size-display: 54px;
+   --font-size-h1: 44px;
+   --font-size-h2: 32px;
+   --font-size-h3: 20px;
+   --font-size-body: 15px;
+   --font-size-small: 13px;
+   --font-size-caption: 11px;
+
+   /* Font Weights */
+   --font-weight-regular: 400;
+   --font-weight-medium: 500;
+   --font-weight-semibold: 600;
+   --font-weight-bold: 700;
+
+   /* Line Heights */
+   --line-height-tight: 1.15;
+   --line-height-heading: 1.25;
+   --line-height-body: 1.55;
+
+   /* ------------------------------------------------------------------------
+     4. Spacing Tokens (8px grid base)
+     ------------------------------------------------------------------------ */
+   --spacing-1: 4px;
+   --spacing-2: 8px;
+   --spacing-3: 12px;
+   --spacing-4: 16px;
+   --spacing-5: 20px;
+   --spacing-6: 24px;
+   --spacing-8: 32px;
+   --spacing-10: 40px;
+   --spacing-12: 48px;
+   --spacing-16: 64px;
+   --spacing-18: 72px;
+
+   /* ------------------------------------------------------------------------
+     5. Border Radius Tokens
+     ------------------------------------------------------------------------ */
+   --radius-input: 6px;
+   --radius-small: 8px;
+   --radius-navigation: 10px;
+   --radius-icon: 12px;
+   --radius-floating: 14px;
+   --radius-panel: 16px;
+   --radius-kpi: 18px;
+   --radius-major-card: 20px;
+   --radius-hero: 28px;
+   --radius-pill: 9999px;
+
+   /* ------------------------------------------------------------------------
+     6. Shadow Tokens (Subtle Enterprise Depth)
+     ------------------------------------------------------------------------ */
+   --shadow-card: 0 2px 8px rgba(10, 59, 44, 0.05), 0 1px 2px rgba(10, 59, 44, 0.03);
+   --shadow-elevated-panel: 0 4px 20px rgba(10, 59, 44, 0.07), 0 2px 6px rgba(10, 59, 44, 0.04);
+   --shadow-floating-control: 0 8px 24px rgba(10, 59, 44, 0.1), 0 2px 8px rgba(10, 59, 44, 0.05);
+   --shadow-hero: 0 16px 40px rgba(10, 59, 44, 0.12), 0 4px 12px rgba(10, 59, 44, 0.06);
+
+   /* ------------------------------------------------------------------------
+     7. Layout Tokens
+     ------------------------------------------------------------------------ */
+   --layout-max-width: 1440px;
+   --layout-sidebar-width: 260px;
+   --layout-sidebar-collapsed-width: 72px;
+   --layout-header-height: 68px;
+   --layout-desktop-padding: 32px;
+   --layout-mobile-padding: 16px;
+
+   /* ------------------------------------------------------------------------
+     8. Transitions
+     ------------------------------------------------------------------------ */
+   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+   --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

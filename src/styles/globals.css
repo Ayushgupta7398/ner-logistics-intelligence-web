@@ -1,0 +1,156 @@
+/* ==========================================================================
+   NER Logistics Intelligence Platform - Global CSS Foundation
+   Theme: Light Green Nature-Tech + AI Logistics Intelligence
+   ========================================================================== */
+
+/* ------------------------------------------------------------------------
+   1. Import Design Tokens
+   ------------------------------------------------------------------------ */
+@import "./tokens.css";
+
+/* ------------------------------------------------------------------------
+   2. Universal Box Sizing & Reset
+   ------------------------------------------------------------------------ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------
+   3. HTML Base
+   ------------------------------------------------------------------------ */
+html {
+  font-family: var(--font-family-sans);
+  font-size: 16px;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ------------------------------------------------------------------------
+   4. Body Base Styles
+   ------------------------------------------------------------------------ */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-pearl);
+  color: var(--color-text-main);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------------------------------------------------------------
+   5. Headings Reset & Foundation
+   ------------------------------------------------------------------------ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  color: var(--color-text-main);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+}
+
+/* ------------------------------------------------------------------------
+   6. Paragraph Base
+   ------------------------------------------------------------------------ */
+p {
+  margin: 0;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+/* ------------------------------------------------------------------------
+   7. Links Foundation
+   ------------------------------------------------------------------------ */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* ------------------------------------------------------------------------
+   8. Buttons and Form Controls Reset
+   ------------------------------------------------------------------------ */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+/* ------------------------------------------------------------------------
+   9. Responsive Media Reset
+   ------------------------------------------------------------------------ */
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------------------
+   10. Focus Accessibility Foundation
+   ------------------------------------------------------------------------ */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ------------------------------------------------------------------------
+   11. Text Selection Style
+   ------------------------------------------------------------------------ */
+::selection {
+  background-color: var(--color-mint-100);
+  color: var(--color-forest-900);
+}
+
+/* ------------------------------------------------------------------------
+   12. Minimal Professional Scrollbar
+   ------------------------------------------------------------------------ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-pearl);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-medium);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
