@@ -1,0 +1,193 @@
+@import "../../styles/tokens.css";
+
+
+/* Application shell container */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--color-pearl);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+}
+
+
+/* Sidebar structure with desktop auto-expand on hover or focus */
+.app-shell__sidebar {
+  width: var(--layout-sidebar-collapsed-width);
+  min-width: var(--layout-sidebar-collapsed-width);
+  background-color: var(--color-white);
+  border-right: 1px solid var(--color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  transition: width var(--transition-normal);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  box-shadow: var(--shadow-card);
+}
+
+.app-shell__sidebar:hover,
+.app-shell__sidebar:focus-within {
+  width: var(--layout-sidebar-width);
+}
+
+.app-shell__sidebar-content {
+  width: var(--layout-sidebar-width);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--spacing-4);
+}
+
+.app-shell__sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  height: var(--layout-header-height);
+  border-bottom: 1px solid var(--color-border-subtle);
+  margin-bottom: var(--spacing-4);
+}
+
+.app-shell__brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-icon);
+  background: var(--gradient-primary-ai);
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-small);
+  flex-shrink: 0;
+}
+
+.app-shell__brand-title {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-forest-900);
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.app-shell__sidebar:hover .app-shell__brand-title,
+.app-shell__sidebar:focus-within .app-shell__brand-title {
+  opacity: 1;
+}
+
+.app-shell__sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell__nav-placeholder {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+  white-space: nowrap;
+  padding: var(--spacing-3);
+  border: 1px dashed var(--color-border-medium);
+  border-radius: var(--radius-small);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.app-shell__sidebar:hover .app-shell__nav-placeholder,
+.app-shell__sidebar:focus-within .app-shell__nav-placeholder {
+  opacity: 1;
+}
+
+
+/* Main content area containing header and page body */
+.app-shell__content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+
+/* Application header placeholder */
+.app-shell__header {
+  height: var(--layout-header-height);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--layout-desktop-padding);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  box-shadow: var(--shadow-card);
+}
+
+.app-shell__header-brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-shell__header-placeholder {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+}
+
+
+/* Page view content container */
+.app-shell__main {
+  flex: 1;
+  padding: var(--layout-desktop-padding);
+  max-width: var(--layout-max-width);
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+/* Responsive layout adaptations for mobile and tablet */
+@media (max-width: 768px) {
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .app-shell__sidebar {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+
+  .app-shell__sidebar:hover,
+  .app-shell__sidebar:focus-within {
+    width: 100%;
+  }
+
+  .app-shell__sidebar-content {
+    width: 100%;
+    height: auto;
+    padding: var(--spacing-2) var(--layout-mobile-padding);
+  }
+
+  .app-shell__sidebar-brand {
+    height: 48px;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .app-shell__brand-title {
+    opacity: 1;
+  }
+
+  .app-shell__sidebar-nav {
+    display: none;
+  }
+
+  .app-shell__header {
+    padding: 0 var(--layout-mobile-padding);
+  }
+
+  .app-shell__main {
+    padding: var(--layout-mobile-padding);
+  }
+}
